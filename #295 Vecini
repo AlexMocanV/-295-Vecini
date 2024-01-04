@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,i,ok=1,c,e,d,x[101];
+    cin>>n;
+    for(i=1;i<=n;i++)
+    {
+        cin>>x[i];
+    }
+    for(i=2;i<=n-1;i++)
+    {
+        if(x[i]%2==x[i-1]%2 and x[i]%2==x[i+1]%2)
+        {
+            ok=0;
+            cout<<"DA";
+            break;
+        }
+    }
+    if(ok==1)
+    {
+        cout<<"NU";
+    }
+    return 0;
+}
